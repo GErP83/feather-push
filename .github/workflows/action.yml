@@ -11,3 +11,5 @@ jobs:
       contents: read
       pages: write
       id-token: write
+    with:
+      docc_swift_version: "6.1"
