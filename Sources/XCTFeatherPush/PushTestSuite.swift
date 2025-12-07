@@ -30,7 +30,7 @@ public struct PushTestSuiteError: Error {
 }
 
 /// push test suite
-public struct PushTestSuite {
+public struct PushTestSuite: Sendable {
 
     let push: PushComponent
 

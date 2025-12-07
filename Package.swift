@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.0
 import PackageDescription
 
 let package = Package(
@@ -15,8 +15,8 @@ let package = Package(
         .library(name: "XCTFeatherPush", targets: ["XCTFeatherPush"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/feather-framework/feather-component.git",  .upToNextMinor(from: "0.5.0")
-        ),
+        .package(url: "https://github.com/feather-framework/feather-component.git",  .upToNextMinor(from: "0.5.0")),
+        .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.4.0"),
     ],
     targets: [
         .target(
