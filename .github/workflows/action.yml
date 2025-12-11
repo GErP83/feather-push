@@ -5,6 +5,22 @@ on:
     branches: [main]
 
 jobs:
+
+  swiftlang_checks:
+    name: Swiftlang Checks
+    uses: swiftlang/github-workflows/.github/workflows/soundness.yml@feature/docc
+    with:
+      license_header_check_project_name: "project"
+      format_check_enabled : true
+      broken_symlink_check_enabled : true
+      unacceptable_language_check_enabled : true
+      api_breakage_check_enabled : false
+      docs_check_enabled : true
+      license_header_check_enabled : true
+      shell_check_enabled : false
+      yamllint_check_enabled : false
+      python_lint_check_enabled : false
+
   create-docc-and-deploy:
     uses: BinaryBirds/github-workflows/.github/workflows/docc_deploy.yml@feature/docc
     permissions:
