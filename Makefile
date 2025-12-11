@@ -1,20 +1,64 @@
-build:
-	swift build
+SHELL=/bin/bash
 
-release:
-	swift build -c release
+baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/feature/docc/scripts
+
+check: symlinks language deps lint headers docc-warnings
+
+breakage:
+	curl -s $(baseUrl)/check-api-breakage.sh | bash
+
+symlinks:
+	curl -s $(baseUrl)/check-broken-symlinks.sh | bash
+
+## params: --local: generate for local testing
+docc-generate:
+	curl -s $(baseUrl)/generate-docc.sh | bash
+
+docc-warnings:
+	curl -s $(baseUrl)/check-docc-warnings.sh | bash
+
+## params: -n: name, -p: port
+run-docc:
+	curl -s $(baseUrl)/run-docc-docker.sh | bash
+
+headers:
+	curl -s $(baseUrl)/check-swift-headers.sh | bash
+
+fix-headers:
+	curl -s $(baseUrl)/check-swift-headers.sh | bash -s -- --fix 
 	
-test:
-	swift test --parallel
+deps:
+	curl -s $(baseUrl)/check-local-swift-dependencies.sh | bash
 
-test-with-coverage:
-	swift test --parallel --enable-code-coverage
+openapi-security:
+	curl -s $(baseUrl)/check-openapi-security.sh | bash
 
-clean:
-	rm -rf .build
+openapi-validation:
+	curl -s $(baseUrl)/check-openapi-validation.sh | bash
+
+language:
+	curl -s $(baseUrl)/check-unacceptable-language.sh | bash
+
+contributors:
+	curl -s $(baseUrl)/generate-contributors-list.sh | bash
+
+## params: -v: version string
+install-format:
+	curl -s $(baseUrl)/install-swift-format.sh | bash
+
+install-openapi:
+	curl -s $(baseUrl)/install-swift-openapi-generator.sh | bash
+
+run-clean:
+	curl -s $(baseUrl)/run-clean.sh | bash
 	
-check:
-	./scripts/run-checks.sh
+## params: -n: name, -p: port
+run-openapi:
+	curl -s $(baseUrl)/run-openapi-docker.sh | bash
+
+lint:
+	curl -s $(baseUrl)/run-swift-format.sh | bash
 
 format:
-	./scripts/run-swift-format.sh --fix
+	curl -s $(baseUrl)/run-swift-format.sh | bash -s -- --fix 
+

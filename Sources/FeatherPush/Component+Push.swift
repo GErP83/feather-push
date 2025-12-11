@@ -1,13 +1,14 @@
 //
 //  Component+Push.swift
-//  FeatherPush
+//  Push2
 //
-//  Created by Tibor Bodecs on 20/11/2023.
+//  Created by Tibor Bodecs on 2024. 04. 10..
 //
 
 import FeatherComponent
 import Logging
 
+/// ComponentID
 public enum PushComponentID: ComponentID {
 
     /// default push component identifier

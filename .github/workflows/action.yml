@@ -21,11 +21,11 @@ jobs:
       yamllint_check_enabled : false
       python_lint_check_enabled : false
 
-  create-docc-and-deploy:
-    uses: BinaryBirds/github-workflows/.github/workflows/docc_deploy.yml@feature/docc
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    with:
-      docc_swift_version: "6.1"
+#  create-docc-and-deploy:
+#    uses: BinaryBirds/github-workflows/.github/workflows/docc_deploy.yml@feature/docc
+#    permissions:
+#      contents: read
+#      pages: write
+#      id-token: write
+#    with:
+#      docc_swift_version: "6.1"

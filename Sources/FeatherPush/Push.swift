@@ -1,15 +1,17 @@
 //
 //  Push.swift
-//  FeatherPush
+//  Push2
 //
 //  Created by Tibor Bodecs on 2023. 01. 16..
 //
 
+/// Delivery enum
 public enum Delivery: String, Sendable {
     case normal
     case silent
 }
 
+/// Platform enum
 public enum Platform: Sendable {
     case iOS
     case macOS

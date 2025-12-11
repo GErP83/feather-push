@@ -1,8 +1,8 @@
 //
 //  PushTestSuite.swift
-//  XCTFeatherPush
+//  Push2
 //
-//  Created by Tibor Bodecs on 17/11/2023.
+//  Created by Tibor Bodecs on 2025. 12. 07..
 //
 
 import Foundation

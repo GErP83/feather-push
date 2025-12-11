@@ -1,6 +1,6 @@
 //
 //  PushComponent.swift
-//  FeatherPush
+//  Push2
 //
 //  Created by Tibor Bodecs on 2023. 01. 16..
 //
