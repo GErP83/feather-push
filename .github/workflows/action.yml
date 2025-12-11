@@ -8,7 +8,7 @@ jobs:
 
   swiftlang_checks:
     name: Swiftlang Checks
-    uses: swiftlang/github-workflows/.github/workflows/soundness.yml@feature/docc
+    uses: swiftlang/github-workflows/.github/workflows/soundness.yml@main
     with:
       license_header_check_project_name: "project"
       format_check_enabled : true
