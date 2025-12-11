@@ -1,6 +1,6 @@
 //
 //  PushTestSuite.swift
-//  Push2
+//  Feather-push
 //
 //  Created by Tibor Bodecs on 2025. 12. 07..
 //
