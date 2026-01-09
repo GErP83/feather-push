@@ -1,4 +1,5 @@
 {
+  "originHash" : "e868881e5929100d9ca61a00a3a67051e3f89d4aaf2f3e50f58a6a68d46b3446",
   "pins" : [
     {
       "identity" : "feather-component",
@@ -7,24 +8,6 @@
       "state" : {
         "revision" : "c209d87352d27afc124422db11c9ca2bb0f7a376",
         "version" : "0.5.0"
-      }
-    },
-    {
-      "identity" : "swift-docc-plugin",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-docc-plugin",
-      "state" : {
-        "revision" : "3e4f133a77e644a5812911a0513aeb7288b07d06",
-        "version" : "1.4.5"
-      }
-    },
-    {
-      "identity" : "swift-docc-symbolkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-docc-symbolkit",
-      "state" : {
-        "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
-        "version" : "1.0.0"
       }
     },
     {
@@ -37,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

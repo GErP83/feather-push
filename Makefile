@@ -1,6 +1,7 @@
 SHELL=/bin/bash
 
-baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/feature/docc/scripts
+baseUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/main/scripts
+devUrl = https://raw.githubusercontent.com/BinaryBirds/github-workflows/refs/heads/feature/docc-modify/scripts
 
 check: symlinks language deps lint headers docc-warnings
 
@@ -12,7 +13,7 @@ symlinks:
 
 ## params: --local: generate for local testing
 docc-generate:
-	curl -s $(baseUrl)/generate-docc.sh | bash
+	curl -s $(devUrl)/generate-docc.sh | bash
 
 docc-warnings:
 	curl -s $(baseUrl)/check-docc-warnings.sh | bash
